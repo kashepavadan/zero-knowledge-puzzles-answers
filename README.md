@@ -1,6 +1,18 @@
-# zero knowledge puzzles
+# Zero Knowledge Puzzles Solutions
 
-Zero knowledge puzzles to learn writing circuits in [circom](https://docs.circom.io/) lang.
+Tutorial problems meant to teach ZK SNARKs with Circom, created by [RareSkills](https://www.rareskills.io/).
+
+I've decided to add my own solutions since many of the solution sets I've seen on GitHub are incorrect and underconstrained. Each solution includes the associated r1cs file printout in the comments (or the number of constraints) so you can see the constraints created by the code. The solutions have also been verified with [Circomspect](https://github.com/trailofbits/circomspect).
+
+If you catch a mistake, please submit a PR with the corrections!
+
+Original is [here](https://github.com/RareSkills/zero-knowledge-puzzles).
+
+You should run the following installation in addition to the steps below to generate and check constraints:
+
+```
+npm install snarkjs
+```
 
 ## Installation
 

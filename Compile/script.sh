@@ -50,7 +50,7 @@ snarkjs groth16 prove Mul_0001.zkey witness.wtns proof.json public.json
 snarkjs groth16 verify verification_key.json public.json proof.json
 
 # Generate a Solidity verifier that allows verifying proofs on Ethereum blockchain
-snarkjs zkey export solidityverifier Mul_0001.zkey ../contracts/verifier.sol
+snarkjs zkey export solidityverifier Mul_0001.zkey verifier.sol
 
 # Generate and print parameters of call
 snarkjs generatecall | tee parameters.txt

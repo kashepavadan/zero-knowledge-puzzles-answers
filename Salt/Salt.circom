@@ -15,8 +15,19 @@ pragma circom 2.1.4;
 // Hash all 3 using mimcsponge as a hashing mechanism. 
 // Output the res using 'out'.
 
+include "../node_modules/circomlib/circuits/mimcsponge.circom";
+
 template Salt() {
-    // Your code here..
+    signal input a;
+    signal input b;
+    signal input salt;
+    signal output out;
+
+    component mimcsponge = MiMCSponge(2, 220, 1);
+    mimcsponge.ins <== [a, b];
+    mimcsponge.k <== salt;
+
+    out <== mimcsponge.outs[0];
 }
 
 component main  = Salt();
@@ -24,6 +35,8 @@ component main  = Salt();
 // because we want them to be a secret , at least in this case. 
 
 // There will be cases where some values will be declared explicitly public .
+
+// 1320 constraints
 
 
 
